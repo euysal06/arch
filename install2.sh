@@ -32,8 +32,6 @@ pacman -S --noconfirm sudo nano networkmanager xorg
 
 systemctl enable NetworkManager
 
-useradd -m euysal
-
-usermod -aG wheel,audio,video,optical,storage,power euysal
+useradd -m -p "" -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel" -s /bin/bash euysal
 
 exit
