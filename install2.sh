@@ -28,12 +28,12 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Archl
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
-useradd -m euysal
-
-usermod -aG wheel,audio,video,optical,storage,power euysal
-
 pacman -S --noconfirm sudo nano networkmanager xorg
 
 systemctl enable NetworkManager
+
+useradd -m euysal
+
+usermod -aG wheel,audio,video,optical,storage,power euysal
 
 exit
